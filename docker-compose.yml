@@ -1,5 +1,13 @@
 services:
 
+  app:
+    image: php8.3-composer:latest
+    container_name: sdti-app
+    ports:
+      - 8080:80
+    volumes:
+      # - /home/phpdro/Documents/projects/sdti-material:/app
+
   postgres:
     image: postgres:16.3-alpine
     container_name: sdti-db
@@ -24,8 +32,6 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - 9090:80
-    # volumes:
-    #   - ./pgadmin:/var/lib/pgadmin
 
 networks:
   default:
