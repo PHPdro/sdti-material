@@ -1,7 +1,7 @@
 services:
 
   app:
-    image: php8.3-composer:latest
+    image: ghcr.io/phpdro/sdti-material/php8.3-composer:latest
     container_name: sdti-app
     ports:
       - 8080:80
