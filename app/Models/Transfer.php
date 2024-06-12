@@ -16,4 +16,9 @@ class Transfer extends Model
     {
         return $this->belongsToMany(Equipment::class);
     }
+
+    public function destination()
+    {
+        return $this->belongsTo(Destination::class);
+    }
 }
